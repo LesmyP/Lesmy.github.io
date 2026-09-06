@@ -3,258 +3,276 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sam Okafor — Product Designer & Frontend Engineer</title>
-<meta name="description" content="Portfolio of Sam Okafor, product designer and frontend engineer.">
+<title>Lesmy Perez — Home & Space Organization | Montreal, QC</title>
+<meta name="description" content="Professional organizing and decluttering services in Montreal, QC. Rooms, garages, and offices — sorted, organized, and built to stay that way.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1B1F2B;
-    --paper:#F0EDE4;
-    --paper-dim:#E5E1D4;
-    --teal:#2F6E62;
-    --mustard:#C99A3B;
-    --text-on-ink:#E7E4DA;
-    --muted:#8A8E9B;
-    --muted-on-paper:#6B6F63;
-    --line:rgba(27,31,43,0.12);
-    --line-on-ink:rgba(231,228,218,0.16);
+    --ink:#26261F;
+    --paper:#F7F5F0;
+    --paper-dim:#EFEBE2;
+    --sage:#6E7F66;
+    --sage-deep:#57654F;
+    --sand:#C9A467;
+    --muted:#8A897E;
+    --line:rgba(38,38,31,0.12);
+    --white:#FFFFFF;
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
-
   html{scroll-behavior:smooth;}
-
   body{
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Inter', sans-serif;
     background:var(--paper);
     color:var(--ink);
-    line-height:1.5;
+    line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
-
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
     *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
   }
+  a{color:inherit; text-decoration:none;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--sage-deep); outline-offset:3px;}
+  img{max-width:100%; display:block;}
 
-  a{color:inherit;}
-  a:focus-visible, button:focus-visible{outline:2px solid var(--teal); outline-offset:3px;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 32px;}
 
-  .wrap{max-width:1040px; margin:0 auto; padding:0 32px;}
+  h1,h2,h3{font-family:'Newsreader', serif; font-weight:500; letter-spacing:-0.01em;}
 
-  /* ---------- HERO ---------- */
-  .hero{
-    background:var(--ink);
-    color:var(--text-on-ink);
-    padding:96px 0 88px;
-    position:relative;
-    overflow:hidden;
-  }
-
-  .hero .wrap{
-    display:grid;
-    grid-template-columns:1.4fr 0.8fr;
-    gap:48px;
-    align-items:end;
-  }
-
+  /* ---------- NAV ---------- */
   nav.top{
-    position:absolute;
-    top:32px; left:0; right:0;
-    z-index:2;
+    padding:26px 0;
+    border-bottom:1px solid var(--line);
   }
   nav.top .wrap{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding-top:0;
   }
-  nav.top .mark{
-    font-family:'Fraunces', serif;
+  .logo-mark{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  /* LOGO PLACEHOLDER: replace this div with <img src="logo.png" alt="Lesmy Perez logo" style="height:40px;"> once you have your logo file */
+  .logo-mark .logo-placeholder{
+    width:40px; height:40px;
+    border-radius:50%;
+    background:var(--sage);
+    color:var(--white);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Newsreader', serif;
+    font-size:16px;
+    flex-shrink:0;
+  }
+  .logo-mark .logo-text{
+    font-family:'Newsreader', serif;
     font-size:19px;
-    letter-spacing:0.01em;
   }
-  nav.top .links{display:flex; gap:28px;}
+  nav.top .links{display:flex; gap:32px;}
   nav.top .links a{
     font-size:14px;
-    color:var(--text-on-ink);
-    text-decoration:none;
+    color:var(--ink);
     opacity:0.75;
     transition:opacity 0.15s ease;
   }
   nav.top .links a:hover{opacity:1;}
 
-  .hero-name{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:clamp(48px, 8vw, 92px);
-    line-height:0.98;
-    letter-spacing:-0.01em;
-    margin-top:64px;
+  /* ---------- HERO ---------- */
+  .hero{padding:100px 0 96px;}
+  .hero .wrap{max-width:760px;}
+  .hero .eyebrow{
+    font-size:14px;
+    color:var(--sage-deep);
+    letter-spacing:0.02em;
+    margin-bottom:18px;
   }
-
-  .hero-role{
-    font-size:19px;
-    color:var(--mustard);
-    margin-top:20px;
-    max-width:34ch;
+  .hero h1{
+    font-size:clamp(40px, 6vw, 64px);
+    line-height:1.08;
+    margin-bottom:24px;
   }
-
-  .hero-blurb{
-    font-size:15px;
+  .hero p.sub{
+    font-size:18px;
     color:var(--muted);
-    line-height:1.7;
-    padding-bottom:6px;
-  }
-
-  .hero-blurb p + p{margin-top:14px;}
-
-  /* ---------- SECTION SHARED ---------- */
-  section{padding:80px 0;}
-  .section-head{
-    display:grid;
-    grid-template-columns:1fr 2fr;
-    gap:32px;
-    margin-bottom:44px;
-    border-bottom:1px solid var(--line);
-    padding-bottom:24px;
-  }
-  .section-head h2{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:28px;
-  }
-  .section-head p{
-    color:var(--muted-on-paper);
-    font-size:15px;
     max-width:52ch;
+    margin-bottom:36px;
   }
-
-  /* ---------- WORK ---------- */
-  .work-list{display:flex; flex-direction:column;}
-  .work-item{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:32px;
-    padding:32px 0;
-    border-bottom:1px solid var(--line);
-    align-items:baseline;
-  }
-  .work-item:first-child{padding-top:0;}
-  .work-item h3{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:24px;
-  }
-  .work-item .meta{
-    font-size:13px;
-    color:var(--muted-on-paper);
-    margin-top:6px;
-  }
-  .work-item p{
-    font-size:15px;
-    color:var(--ink);
-    opacity:0.82;
-  }
-  .work-item .tags{
-    margin-top:12px;
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-  }
-  .work-item .tags span{
-    font-size:12px;
-    padding:4px 10px;
-    border:1px solid var(--line);
-    border-radius:3px;
-    color:var(--muted-on-paper);
-  }
-  .work-item a.view{
-    display:inline-block;
-    margin-top:14px;
-    font-size:14px;
-    text-decoration:underline;
-    text-decoration-color:var(--mustard);
-    text-underline-offset:4px;
-  }
-
-  /* ---------- ABOUT ---------- */
-  .about{background:var(--paper-dim);}
-  .about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:48px;
-  }
-  .about-grid p{font-size:16px; margin-bottom:16px; max-width:56ch;}
-  .facts{list-style:none;}
-  .facts li{
-    display:flex;
-    justify-content:space-between;
-    padding:14px 0;
-    border-bottom:1px solid var(--line);
-    font-size:14px;
-  }
-  .facts li span:first-child{color:var(--muted-on-paper);}
-
-  /* ---------- CONTACT ---------- */
-  .contact{
-    background:var(--ink);
-    color:var(--text-on-ink);
-    text-align:left;
-  }
-  .contact .wrap{
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:40px;
-    align-items:center;
-  }
-  .contact h2{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:clamp(32px, 5vw, 48px);
-    line-height:1.1;
-  }
-  .contact-actions{display:flex; flex-direction:column; gap:14px; align-items:flex-start;}
   .btn{
     display:inline-flex;
     align-items:center;
     gap:8px;
-    background:var(--mustard);
-    color:var(--ink);
-    padding:14px 22px;
+    background:var(--sage-deep);
+    color:var(--white);
+    padding:14px 26px;
     border-radius:3px;
     font-weight:500;
     font-size:15px;
-    text-decoration:none;
     border:none;
     cursor:pointer;
   }
   .btn.secondary{
     background:transparent;
-    color:var(--text-on-ink);
-    border:1px solid var(--line-on-ink);
+    color:var(--ink);
+    border:1px solid var(--line);
+  }
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:88px 0;}
+  .section-head{
+    max-width:56ch;
+    margin-bottom:52px;
+  }
+  .section-head .eyebrow{
+    font-size:13px;
+    color:var(--sage-deep);
+    margin-bottom:10px;
+  }
+  .section-head h2{
+    font-size:32px;
+    margin-bottom:14px;
+  }
+  .section-head p{
+    color:var(--muted);
+    font-size:16px;
+  }
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--paper-dim);}
+  .service-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+  }
+  .service-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:36px 30px;
+  }
+  .service-card .num{
+    font-family:'Newsreader', serif;
+    font-size:14px;
+    color:var(--sand);
+    margin-bottom:18px;
+  }
+  .service-card h3{
+    font-size:22px;
+    margin-bottom:12px;
+  }
+  .service-card p.desc{
+    color:var(--muted);
+    font-size:15px;
+    margin-bottom:20px;
+  }
+  .service-card ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .service-card ul li{
+    font-size:14px;
+    color:var(--ink);
+    opacity:0.85;
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+  }
+  .service-card ul li::before{
+    content:"—";
+    color:var(--sage);
+    flex-shrink:0;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:0.8fr 1.2fr;
+    gap:56px;
+    align-items:center;
+  }
+  /* PHOTO PLACEHOLDER: replace this div with <img src="your-photo.jpg" alt="Lesmy Perez"> once you have your photo ready */
+  .about-photo{
+    width:100%;
+    aspect-ratio:4/5;
+    background:var(--paper-dim);
+    border:1px solid var(--line);
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    font-size:14px;
+    text-align:center;
+    padding:20px;
+  }
+  .about-text .eyebrow{
+    font-size:13px;
+    color:var(--sage-deep);
+    margin-bottom:10px;
+  }
+  .about-text h2{
+    font-size:30px;
+    margin-bottom:20px;
+  }
+  .about-text p{
+    color:var(--ink);
+    opacity:0.85;
+    font-size:16px;
+    margin-bottom:16px;
+    max-width:52ch;
+  }
+  .about-text .location{
+    margin-top:24px;
+    font-size:14px;
+    color:var(--muted);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:var(--sage-deep);
+    color:var(--white);
+    text-align:center;
+  }
+  .contact .wrap{max-width:600px;}
+  .contact h2{
+    font-size:clamp(28px, 4vw, 40px);
+    margin-bottom:16px;
+    color:var(--white);
+  }
+  .contact p{
+    font-size:16px;
+    opacity:0.85;
+    margin-bottom:32px;
+  }
+  .contact .btn{
+    background:var(--sand);
+    color:var(--ink);
   }
 
   footer{
-    padding:28px 0;
+    padding:32px 0;
     font-size:13px;
-    color:var(--muted-on-paper);
+    color:var(--muted);
     display:flex;
     justify-content:space-between;
+    align-items:center;
   }
 
-  @media (max-width: 760px){
-    nav.top{position:static; padding:24px 0 0;}
-    .hero{padding-top:32px;}
-    .hero .wrap{grid-template-columns:1fr; gap:28px;}
-    .hero-name{margin-top:24px;}
-    .section-head{grid-template-columns:1fr; gap:12px;}
-    .work-item{grid-template-columns:1fr; gap:10px;}
+  @media (max-width: 800px){
+    nav.top .links{gap:20px;}
+    .service-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
-    .contact .wrap{grid-template-columns:1fr;}
+    .about-photo{max-width:280px; margin:0 auto;}
     .wrap{padding:0 22px;}
+    footer{flex-direction:column; gap:8px; text-align:center;}
   }
 </style>
 </head>
@@ -262,9 +280,12 @@
 
 <nav class="top">
   <div class="wrap">
-    <div class="mark">Sam Okafor</div>
+    <div class="logo-mark">
+      <div class="logo-placeholder">LP</div>
+      <div class="logo-text">Lesmy Perez</div>
+    </div>
     <div class="links">
-      <a href="#work">Work</a>
+      <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
@@ -273,104 +294,89 @@
 
 <header class="hero">
   <div class="wrap">
-    <div>
-      <h1 class="hero-name">Sam<br>Okafor</h1>
-      <p class="hero-role">Product designer and frontend engineer building interfaces people trust on the first try.</p>
-    </div>
-    <div class="hero-blurb">
-      <p>Based in Toronto, working with teams remotely. Currently designing and building the onboarding flow for a fintech startup.</p>
-      <p>Previously at a healthcare analytics company, shipping dashboards used by 40,000+ clinicians.</p>
-    </div>
+    <div class="eyebrow">Home & Space Organization · Montreal, QC</div>
+    <h1>Your space, simplified.</h1>
+    <p class="sub">I help people turn overwhelming rooms, garages, and offices into calm, organized spaces that are easy to keep that way — a place for everything, and everything in its place.</p>
+    <a class="btn" href="#contact">Get a free quote</a>
   </div>
 </header>
 
-<section id="work">
+<section id="services" class="services">
   <div class="wrap">
     <div class="section-head">
-      <h2>Selected work</h2>
-      <p>A few projects that show how I think through a problem, from first sketch to shipped product.</p>
+      <div class="eyebrow">Services</div>
+      <h2>Three ways to reclaim your space</h2>
+      <p>Every project starts with sorting and classifying, then moves into organizing, labeling, and building a system you'll actually maintain.</p>
     </div>
-    <div class="work-list">
 
-      <div class="work-item">
-        <div>
-          <h3>Ledger — onboarding redesign</h3>
-          <div class="meta">Fintech · Design + Frontend · 2025</div>
-        </div>
-        <div>
-          <p>Cut signup drop-off by 31% by replacing a 12-step form with a guided, single-question-at-a-time flow. Designed in Figma, built in React.</p>
-          <div class="tags"><span>Figma</span><span>React</span><span>User research</span></div>
-          <a class="view" href="#">View case study</a>
-        </div>
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="num">01</div>
+        <h3>Home Organization</h3>
+        <p class="desc">A full room-by-room project to sort through what you own, decide what stays, and build a system that fits how you actually live.</p>
+        <ul>
+          <li>Sorting & classifying belongings</li>
+          <li>Organizing by zone and purpose</li>
+          <li>Labeling for easy upkeep</li>
+          <li>Custom storage & filing solutions</li>
+        </ul>
       </div>
 
-      <div class="work-item">
-        <div>
-          <h3>Clinic View — data dashboard</h3>
-          <div class="meta">Healthcare · Product Design · 2024</div>
-        </div>
-        <div>
-          <p>Rebuilt a patient-monitoring dashboard used daily by clinicians, reducing the average time to spot an anomaly from 40 seconds to under 8.</p>
-          <div class="tags"><span>Dashboard design</span><span>D3.js</span><span>Accessibility</span></div>
-          <a class="view" href="#">View case study</a>
-        </div>
+      <div class="service-card">
+        <div class="num">02</div>
+        <h3>Garage Decluttering</h3>
+        <p class="desc">Reclaim your garage from years of overflow. We sort, purge, and design a layout that makes sense for tools, seasonal items, and everything in between.</p>
+        <ul>
+          <li>Full decluttering & purge session</li>
+          <li>Zoned organizing systems</li>
+          <li>Labeled bins & storage stations</li>
+          <li>Layout designed to keep it that way</li>
+        </ul>
       </div>
 
-      <div class="work-item">
-        <div>
-          <h3>Fieldnote — note-taking app</h3>
-          <div class="meta">Personal project · Full build · 2023</div>
-        </div>
-        <div>
-          <p>A distraction-free writing app for researchers, with offline-first sync. Designed, built, and shipped solo to 2,000+ users.</p>
-          <div class="tags"><span>Swift</span><span>CloudKit</span><span>Solo build</span></div>
-          <a class="view" href="#">View case study</a>
-        </div>
+      <div class="service-card">
+        <div class="num">03</div>
+        <h3>Office & Workspace</h3>
+        <p class="desc">A clear desk and a clear system for paperwork, supplies, and files — so your workspace supports your focus instead of competing with it.</p>
+        <ul>
+          <li>Paper sorting & filing systems</li>
+          <li>Desk & supply organization</li>
+          <li>Labeling for fast retrieval</li>
+          <li>Ongoing-maintenance guidance</li>
+        </ul>
       </div>
 
     </div>
   </div>
 </section>
 
-<section id="about" class="about">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>About</h2>
-      <p></p>
-    </div>
-    <div class="about-grid">
-      <div>
-        <p>I've spent the last seven years moving between design and engineering, which means I design things I can actually build, and build things worth designing well.</p>
-        <p>I care most about the moments users don't notice: the form that doesn't lose their data, the loading state that doesn't feel like waiting, the error message that tells them what to do next.</p>
-        <p>Outside of work, I teach a weekend design workshop for career-changers and I'm slowly learning to sail.</p>
-      </div>
-      <ul class="facts">
-        <li><span>Based in</span><span>Toronto, Canada</span></li>
-        <li><span>Focus</span><span>Product design, frontend engineering</span></li>
-        <li><span>Tools</span><span>Figma, React, TypeScript</span></li>
-        <li><span>Available for</span><span>Contract work, Q1 2027</span></li>
-        <li><span>Resume</span><span><a href="#" style="text-decoration:underline;">Download PDF</a></span></li>
-      </ul>
+<section id="about">
+  <div class="wrap about-grid">
+    <!-- PHOTO PLACEHOLDER: replace the div below with an <img> tag once your photo is ready -->
+    <div class="about-photo">Your photo here<br>(replace this box with your image)</div>
+    <div class="about-text">
+      <div class="eyebrow">About me</div>
+      <h2>Why I love this work</h2>
+      <p>I've always been the person friends call when a space feels unmanageable — not because I judge the mess, but because I see what's possible underneath it. There's something deeply satisfying about watching a room go from overwhelming to calm, and watching someone breathe easier in a space that finally works for them.</p>
+      <p>Clutter isn't a character flaw. It's usually just a system that never got built. My job is to help you build one — sorting through what you own, organizing it in a way that makes sense for your life, and leaving you with habits and labels that make it easy to maintain, long after I'm gone.</p>
+      <p>If your home, garage, or office has been weighing on you, I'd love to help you take it back.</p>
+      <div class="location">📍 Serving Montreal, QC and surrounding areas</div>
     </div>
   </div>
 </section>
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <div>
-      <h2>Have a project in mind?<br>Let's talk about it.</h2>
-    </div>
-    <div class="contact-actions">
-      <a class="btn" href="mailto:hello@samokafor.com">Email hello@samokafor.com</a>
-      <a class="btn secondary" href="#">LinkedIn</a>
-      <a class="btn secondary" href="#">GitHub</a>
-    </div>
+    <h2>Ready to simplify your space?</h2>
+    <p>Tell me a bit about your project and I'll get back to you with a free quote.</p>
+    <a class="btn" href="mailto:lesmyperez@gmail.com">Email lesmyperez@gmail.com</a>
   </div>
 </section>
 
 <footer class="wrap">
-  <span>© 2026 Sam Okafor</span>
-  <span>Built with care in Toronto</span>
+  <span>© 2026 Lesmy Perez</span>
+  <span>Your space, simplified.</span>
 </footer>
 
 </body>
