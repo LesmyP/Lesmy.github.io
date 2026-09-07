@@ -251,6 +251,26 @@
     background:var(--sand);
     color:var(--ink);
   }
+  .contact-actions{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+  }
+  .copy-email{
+    background:none;
+    border:none;
+    color:var(--white);
+    opacity:0.75;
+    font-size:14px;
+    font-family:'Inter', sans-serif;
+    cursor:pointer;
+    text-decoration:underline;
+    text-underline-offset:3px;
+    padding:4px;
+  }
+  .copy-email:hover{opacity:1;}
+  .copy-email.copied{opacity:1; color:var(--sand); text-decoration:none;}
 
   footer{
     padding:32px 0;
@@ -365,9 +385,30 @@
   <div class="wrap">
     <h2>Ready to simplify your space?</h2>
     <p>Tell me a bit about your project and I'll get back to you with a free quote.</p>
-    <a class="btn" href="mailto:lesmyperez@gmail.com">Email lesmyperez@gmail.com</a>
+    <div class="contact-actions">
+      <a class="btn" href="mailto:infolesmy@gmail.com">Email infolesmy@gmail.com</a>
+      <button type="button" class="copy-email" id="copyEmailBtn" onclick="copyEmail()">Copy email address instead</button>
+    </div>
   </div>
 </section>
+
+<script>
+  function copyEmail(){
+    const email = "infolesmy@gmail.com";
+    const btn = document.getElementById("copyEmailBtn");
+    navigator.clipboard.writeText(email).then(function(){
+      const originalText = btn.textContent;
+      btn.textContent = "Copied to clipboard!";
+      btn.classList.add("copied");
+      setTimeout(function(){
+        btn.textContent = originalText;
+        btn.classList.remove("copied");
+      }, 2000);
+    }).catch(function(){
+      btn.textContent = "Couldn't copy — email is " + email;
+    });
+  }
+</script>
 
 <footer class="wrap">
   <span>© 2026 Lesmy Perez</span>
