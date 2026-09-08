@@ -183,6 +183,26 @@
     flex-shrink:0;
   }
 
+  /* ---------- EXTRA SERVICES ---------- */
+  .extra-services-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:48px;
+  }
+  .extra-service-item{
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .extra-service-item h3{
+    font-size:18px;
+    margin-bottom:6px;
+    font-weight:500;
+  }
+  .extra-service-item p{
+    font-size:14px;
+    color:var(--muted);
+  }
+
   /* ---------- ABOUT ---------- */
   .about-grid{
     display:grid;
@@ -277,6 +297,7 @@
   @media (max-width: 800px){
     nav.top .links{gap:20px;}
     .service-grid{grid-template-columns:1fr;}
+    .extra-services-list{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
     .about-photo{max-width:280px; margin:0 auto;}
     .wrap{padding:0 22px;}
@@ -294,6 +315,7 @@
     </div>
     <div class="links">
       <a href="#services">Services</a>
+      <a href="#more-services">More Services</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
@@ -355,6 +377,35 @@
         </ul>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section id="more-services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Also offering</div>
+      <h2>A few more ways I can help</h2>
+      <p>Beyond the core services above, here are some other projects I take on.</p>
+    </div>
+
+    <div class="extra-services-list">
+      <div class="extra-service-item">
+        <h3>Downsizing</h3>
+        <p>Support for moving to a smaller space — whether you're planning for retirement or adjusting after kids move out.</p>
+      </div>
+      <div class="extra-service-item">
+        <h3>Room Layouts</h3>
+        <p>Reworking furniture and storage placement to maximize flow, function, and space in any room.</p>
+      </div>
+      <div class="extra-service-item">
+        <h3>Moving Prep</h3>
+        <p>Packing and unpacking support to get you settled into your new space quickly and without the chaos.</p>
+      </div>
+      <div class="extra-service-item">
+        <h3>Storage Solutions</h3>
+        <p>Finding the right storage systems and products tailored to your specific space and needs.</p>
+      </div>
     </div>
   </div>
 </section>
